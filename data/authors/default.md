@@ -1,7 +1,7 @@
 ---
-name: Tails Azimuth
+name: Deam Tarisai
 avatar: /static/images/avatar.png
-occupation: Professor of Atmospheric Science
+occupation: Frontend developer
 company: Stanford University
 email: address@yoursite.com
 twitter: https://twitter.com/Twitter
