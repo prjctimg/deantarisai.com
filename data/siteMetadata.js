@@ -5,7 +5,7 @@ const siteMetadata = {
   description: 'The beauty of color.',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://deantarisai.com',
+  siteUrl: 'https://blog.deantarisai.com',
   siteRepo: 'https://github.com/prjctimg/deantarisai.com',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/slowly-avatar.png',
