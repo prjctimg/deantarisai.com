@@ -6,4 +6,4 @@ company: Freelancer
 twitter: https://twitter.com/deantarisai
 ---
 
-Self taught JavaScript developer from Zimbabwe
+Self taught JavaScript developer from Zimbabwe. Always learning.
