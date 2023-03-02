@@ -14,7 +14,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@fontsource/inter": "4.5.2",
+    "@fontsource/lato": "4.5.10",
     "@mailchimp/mailchimp_marketing": "^3.0.58",
     "@mui/material": "^5.11.9",
     "@next/bundle-analyzer": "^12.1.4",
