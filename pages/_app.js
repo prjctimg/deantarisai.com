@@ -2,7 +2,7 @@ import '@/css/tailwind.css'
 import '@/css/prism.css'
 import 'katex/dist/katex.css'
 
-import '@fontsource/lato/variable-full.css'
+import '@fontsource/lato'
 
 import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
