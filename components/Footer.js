@@ -21,9 +21,7 @@ export default function Footer() {
           <Link href="/">{siteMetadata.title}</Link>
         </div>
         <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
-          <Link href="https://github.com/prjctimg/deantarisai.com">
-         Made with ♥ in Zim🇿🇼
-          </Link>
+          <p> &lt;/&gt;with ♥ in Zim🇿🇼</p>
         </div>
       </div>
     </footer>
