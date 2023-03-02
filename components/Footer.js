@@ -22,7 +22,7 @@ export default function Footer() {
         </div>
         <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
           <Link href="https://github.com/prjctimg/deantarisai.com">
-            &gt;/&lt; with ♥ in Zimbabwe.
+         <p>   &gt;/&lt; with ♥ in Zim🇿🇼 </p>
           </Link>
         </div>
       </div>
