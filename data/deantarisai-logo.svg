@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="deantarisai-pink.svg"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.8422839"
+     inkscape:cx="-180.21109"
+     inkscape:cy="191.60999"
+     inkscape:window-width="1366"
+     inkscape:window-height="745"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient6966">
+      <stop
+         style="stop-color:#ff1493;stop-opacity:1;"
+         offset="0"
+         id="stop6962" />
+      <stop
+         style="stop-color:#ffaf00;stop-opacity:1"
+         offset="1"
+         id="stop6964" />
+    </linearGradient>
+    <rect
+       x="-369.10705"
+       y="151.98526"
+       width="486.35282"
+       height="49.938013"
+       id="rect5254" />
+    <rect
+       x="-286.60077"
+       y="262.71737"
+       width="238.83398"
+       height="41.253141"
+       id="rect2102" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6966"
+       id="linearGradient6968"
+       x1="-70.085106"
+       y1="35.473404"
+       x2="-66.638298"
+       y2="54.143616"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text2100"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect2102);fill:#1a1a1a;fill-opacity:1;stroke:none"><tspan
+         x="-286.60156"
+         y="340.36571"
+         id="tspan9354"><tspan
+           dx="0 24.599991 22.559967 22.440033 24.720001 14.440002 22.440033 16.520004 10.319977 19.160004 22.440033"
+           id="tspan9352">deantarisai</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text5252"
+       style="fill:black;fill-opacity:1;line-height:1.25;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;white-space:pre;shape-inside:url(#rect5254)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:Pacifico;fill:#ff3fa6;fill-opacity:1;stroke:none;stroke-width:0.264583;-inkscape-font-specification:'Pacifico, Normal';font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+       x="-91.914894"
+       y="45.382977"
+       id="text5502"><tspan
+         sodipodi:role="line"
+         id="tspan5500"
+         style="stroke-width:0.264583;-inkscape-font-specification:'Pacifico, Normal';font-family:Pacifico;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.58330002px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff3fa6;fill-opacity:1"
+         x="-91.914894"
+         y="45.382977">deantarisai</tspan></text>
+  </g>
+</svg>

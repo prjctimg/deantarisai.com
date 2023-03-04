@@ -26,6 +26,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Lato'],
+        script: ['Pacifico']
       },
       colors: {
         primary: colors.pink,

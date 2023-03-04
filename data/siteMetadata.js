@@ -1,8 +1,8 @@
 const siteMetadata = {
   title: 'deantarisai',
   author: 'Dean Tarisai',
-  headerTitle: 'Dean Tarisai',
-  description: 'Frontend junkie.',
+  headerTitle: '',
+  description: 'Always learning',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://deantarisai.com',
