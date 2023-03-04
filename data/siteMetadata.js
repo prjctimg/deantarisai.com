@@ -7,7 +7,7 @@ const siteMetadata = {
   theme: 'system', // system, dark or light
   siteUrl: 'https://deantarisai.com',
   siteRepo: 'https://github.com/prjctimg/deantarisai.com',
-  siteLogo: '/deantarisai-logo.png',
+  siteLogo: '/static/images/deantarisai-logo.png',
   image: '/static/images/slowly-avatar.png',
   socialBanner: '/static/images/deantarisai-banner.png',
   email: 'prjctimg@outlook.com',

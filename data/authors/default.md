@@ -4,6 +4,10 @@ avatar: /static/images/slowly-avatar.png
 occupation: Web Developer
 company: Freelancer
 twitter: https://twitter.com/deantarisai
+email: 'prjctimg@outlook.com',
+github: 'https://github.com/prjctimg'
+  
+
 ---
 
-Self taught programmer hailing from Zimbabwe with a main focus on the frontend of the stack. Fields of interest are (but not limited to) color,generative art and game development. Always learning.
+Self taught programmer from Zimbabwe. Currently exploring the worlds of color,generative art and game development. Always learning.
