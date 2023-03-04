@@ -3,9 +3,9 @@ name: Dean Tarisai
 avatar: /static/images/slowly-avatar.png
 occupation: Web Developer
 company: Freelancer
-twitter: https://twitter.com/deantarisai
-email: 'prjctimg@outlook.com',
-github: 'https://github.com/prjctimg'
+twitter:https://twitter.com/deantarisai
+email: prjctimg@outlook.com
+github: https://github.com/prjctimg
   
 
 ---
