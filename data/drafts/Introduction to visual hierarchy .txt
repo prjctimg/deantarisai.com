@@ -1,0 +1,21 @@
+Visual Hierarchy 
+
+Introduction 
+
+Visual hierarchy establishes an order of importance within the user interface. In plain English, this means it allows us to direct the user's eyes to elements of importance.
+
+ Inevitably it will include ranking our elements from most to least importance. 
+This allows us to instantly communicate the purpose of the website. Failure to achieve this hierarchy will cause most users to leave the website quickly  because the information they're looking for isn't immediately presented. 
+
+In this series we're going to cover some of the main topics in visual hierarchy which are (not ranked in order of importance):
+
+[  ] Size
+[  ] Spacing
+[  ] Colour 
+[  ] Layout
+[  ] Spacing
+[  ] Style
+
+ 
+
+This helps reduce cognitive load because the elements on the screen won't demand for attention from the user at the same time.

@@ -25,10 +25,10 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
+        sans: ['Lato'],
       },
       colors: {
-        primary: colors.teal,
+        primary: colors.pink,
         gray: colors.neutral,
       },
       typography: (theme) => ({

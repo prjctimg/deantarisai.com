@@ -6,7 +6,7 @@ const projectsData = [
     description: `A small-ish JavaScript library of theme and palette generating utilities.`,
 
     /* Add the path to to my project cover graphic */
-    imgSrc: '/static/images/google.png',
+    imgSrc: '/static/images/huetiful-cover.png',
     href: 'https://github.com/prjctimg/huetiful',
   }
 

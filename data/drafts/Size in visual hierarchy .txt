@@ -1,0 +1,12 @@
+Size
+
+Bigger elements are more noticeable than smaller ones.In simple terms the more important elements should be bigger.
+
+One of the principles highlighted by Fitts's Law is that an object with a bigger size is easier to interact with. This can be seen in calls-to-action which are usually of bigger size to immediately draw the user's attention therefore encouraging engagement with the website. 
+
+Scale and contrast can help achieve visual hierarchy whilst also saving space on the screen. This basically means that surrounding an averagely sized element with smaller elements will make it look bigger(there must be some psychology at play here).
+
+Achieving visual hierarchy using size is mostly implemented in minimalistic designs. This is mostly because minimalism aims to reduce the amount of elements on the screen whilst emphasizing the importance of the remaining elements.
+
+Typography can be made to stand out in the UI (for example headings) by giving it font size that shows its importance. 
+For example a main heading may have a size of 48pt whilst the subheading is 36pt and the body text being 24pt. By doing thus we have achieved a hierarchy of importance through size.

@@ -7,15 +7,15 @@ const siteMetadata = {
   theme: 'system', // system, dark or light
   siteUrl: 'https://deantarisai.com',
   siteRepo: 'https://github.com/prjctimg/deantarisai.com',
-  siteLogo: '/static/images/logo.png',
+  siteLogo: '/deantarisai-logo.png',
   image: '/static/images/slowly-avatar.png',
-  socialBanner: '/static/images/twitter-card.png',
+  socialBanner: '/static/images/deantarisai-banner.png',
   email: 'prjctimg@outlook.com',
-  github: 'https://github.com',
+  github: 'https://github.com/prjctimg',
   twitter: 'https://twitter.com/deantarisai',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
+  // facebook: 'https://facebook.com',
+  //  youtube: 'https://youtube.com',
+  // linkedin: 'https://www.linkedin.com',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
@@ -30,7 +30,7 @@ const siteMetadata = {
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
     // Please add your .env file and modify it according to your selection
-    provider: 'buttondown',
+    provider: 'mailchimp',
   },
   comment: {
     // If you want to use a commenting system other than giscus you have to add it to the
