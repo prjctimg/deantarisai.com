@@ -3,7 +3,7 @@ import '@/css/prism.css'
 import 'katex/dist/katex.css'
 
 import '@fontsource/lato'
-
+import '@fontsource/pacifico'
 import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
 
