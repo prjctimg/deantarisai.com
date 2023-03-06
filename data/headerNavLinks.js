@@ -5,7 +5,7 @@ const headerNavLinks = [
 
   { href: '/projects', icon: <Code className='inline m-4 text-gray-600' />, title: 'Projects' },
 
-  { href: '/tags', icon: <Wind className='inline m-4 text-gray-600' />, title: 'hisMind' }, { href: '/about', icon: <Info className='inline m-4 text-gray-600' />, title: 'About' }
+  { href: '/huetiful', icon: <Wind className='inline m-4 text-gray-600' />, title: 'Huetiful' }, { href: '/about', icon: <Info className='inline m-4 text-gray-600' />, title: 'About' }
 ]
 
 export default headerNavLinks
