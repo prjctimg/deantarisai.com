@@ -42,7 +42,7 @@ const MobileNav = () => {
         </svg>
       </button>
       <div
-        className={`fixed top-0 left-0 z-10 h-full w-full transform bg-gray-100 opacity-95 duration-300 ease-in-out dark:bg-gray-800 ${navShow ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed top-0 left-0 z-10 h-full w-full transform bg-gray-100  opacity-95 duration-300 ease-in-out dark:bg-gray-800 ${navShow ? 'translate-x-0' : 'translate-x-full'
           }`}
       >
         <div className="flex justify-end">
@@ -69,7 +69,7 @@ const MobileNav = () => {
         <nav className="fixed mt-8 h-full">
           {headerNavLinks.map((link) => (<Link
             href={link.href} key={link.title}
-            className=" block container text-2xl font-normal tracking-widest text-gray-900  dark:text-gray-100 px-12 bg-white shadow-lg rounded-md py-4 mb-2 "
+            className=" block container text-2xl font-normal tracking-widest text-gray-900 dark:bg-gray-400 dark:text-gray-800 px-12 bg-white shadow-lg rounded-md py-4 mb-2 "
             onClick={onToggleNav}
           >
 

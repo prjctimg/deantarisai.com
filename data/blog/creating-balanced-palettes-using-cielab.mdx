@@ -1,0 +1,153 @@
+---
+title: Creating balanced palettes with the CIELAB color space.
+date: '2023-03-06'
+tags: ['Design', 'Colour', 'JavaScript']
+draft: false
+summary: Discover how to create perceptually uniform palettes using the LCH color space.
+images: ['/static/images/tonal-palettes.png']
+layout: PostSimple
+canonicalUrl: https://deantarisai.com/blog/creating-balanced-palettes-using-cielab
+---
+
+![Tonal palettes](/static/images/tonal-palettes.png)
+
+- [Source](https://www.flerlargetwins.com/2021/06/datafam-colors-color-palette.html?m=1)
+
+The CIELAB color space was intended to be perceptually uniform, that is to say that the way colors transition into each other should match as expected by the human vision.
+
+It is based on the opponent color model of human vision where red and green form an opponent pair and blue and yellow form an opponent pair.
+
+Often shortened as L*a*b\*, each letter represents a channel
+
+L
+
+For perceptual lightness.
+
+\*a
+
+Represents the red and green opponent pair. Negative values map to green while positive values map to red.
+
+\*b
+
+Represents the blue and yellow opponent pair.Negative values map to blue while positive values map to yellow.
+
+However due to technicalities such as some of the colors not being reproducible in RGB monitors the majority of the colors are clipped because they're not mapped on the RGB cube.
+
+LCH: A more practical approach
+
+LCH belongs to the CIELAB color space family and it uses the same opponent pair model to be perceptually uniform.
+
+L
+
+Stands for the lightness of the color.
+
+c
+
+Represents the chromaticity (saturation) channel.
+
+h
+
+The hue value measured in degrees. Each hue is found at a specific angle.
+
+We can take advantage of this color space without having to deal with complexity of the math manually. In this example I'll be Chroma.js, an open source JavaScript library for handling color manipulations and conversions.
+
+Perceptually uniform colors. A brief introduction
+
+Oftenly when working with colors we deal with the RGB color space which is the widely supported color space in browsers. However manipulating color in this space feels unintuitive because colors do not transition in a linear fashion as we would expect. This is where perceptually uniform color spaces come in.
+
+Example
+
+Let's say we want to generate a palette of colors to use in our designs. Using the color picker to select colors can result in choosing colors that are not equally saturated as well as having unequal lightness.
+
+One way to achieve can be done by creating function that;
+
+Takes a base color as input from any recognizable format.
+
+The color is converted to a perceptually uniform color space and then by mapping through an array of hue values the hue channel of the base color is mutated whilst keeping the lightness and chromaticity channels unchanged. The result will be stored in an object that will have a key to identify the palette type and value of an array containing the computed color values.
+
+The original source code was taken from a post by George Francis. You can check out the original article [here](https://tympanus.net/codrops/2021/12/07/coloring-with-code-a-programmatic-approach-to-design/)
+
+```
+import _ from 'lodash'
+import chroma from 'chroma-js'
+
+
+
+ function adjustHue(value = 0) {
+   if (value < 0)
+     value += Math.ceil(-value / 360) * 360;
+
+   return value % 360;
+ }
+
+
+ export const classicPalettes = (baseColor = { l: 0, c: 0, h: 0 }) => {
+   const targetHueSteps = {
+     analogous: [0, 30, 60],
+     triadic: [0, 120, 240],
+     tetradic: [0, 90, 180, 270],
+     complementary: [0, 180],
+     splitComplementary: [0, 150, 210]
+   };
+   const palettes = {};
+
+
+   
+   _.each(targetHueSteps, (value, key) => {
+     palettes[key] = targetHueSteps[key].map((step) => ({
+       mode: "lch",
+       l: baseColor.l,
+       c: baseColor.c,
+       h: adjustHue(baseColor.h + step)
+     }))
+   })
+
+
+   return palettes
+
+ }
+
+
+
+
+
+ function generate() {
+   // choose a random base color
+   const base = {
+     l: 50 + Math.random() * 10,
+     c: 60 + Math.random() * 10,
+     h: Math.random() * 360,
+     mode: "lch"
+   };
+ }
+ let palettes = classicPalettes({ l: 70, c: 80, h: 70 })
+ console.log(palettes)
+
+
+export function tonalPalette(color = 'blue', mode = 'lab', ch = 'l') {
+     //First it will put the color in  a color space that gives us the required result
+
+     var tonalPaletteMap = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 99, 100];
+     // Add every value in the tonalPaletteMap to the passed in base color
+     return _.map(tonalPaletteMap, (tone) => chroma(color)
+.set(`${mode}.${ch}`, tone)
+.hex(`rgba`)
+
+     );
+
+ }
+```
+
+> A tonal, or monochromatic, colour scheme is made up of one main hue with various tints and tones of that colour added in.
+> Put simply, “tonal colours are different shades of colours in the same main colour group,” says Davina.
+>
+> - [Your Home and Garden](https://www.yourhomeandgarden.co.nz/inspiration/tonal-decorating-is-the-key-to-a-relaxing-interior)
+
+In the above code I created a small helper function `tonalPalette()` that will map through the array of color values of a palette type and return a 13 color tonal palette for each color. The function takes a color argument and by default I set it to blue just to minimize errors of calling the Chroma constructor with an undefined value. The mode is automatically set to LCH which is the color space we need in our case because of its perceptual uniformity. It will take a ch argument which is the channel we want to manipulate,in this case it is the lightness channel. The function will get the lightness channel of each color and set it to the lightness values defined in tonalPaletteMap and return an array with 13 colors in hex format ready for use in our designs.
+
+I hope you'll find this helpful. Feel free to leave a comment below or [tweet](https://twitter.com/deantarisai) about it.
+
+Till next time 👋🏾
+
+> A tonal, or monochromatic, colour scheme is made up of one main hue with various tints and tones of that colour added in.
+> Put simply, “tonal colours are different shades of colours in the same main colour group,” says Davina.
