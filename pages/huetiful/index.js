@@ -2,7 +2,7 @@ import siteMetadata from '@/data/siteMetadata'
 import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
 import { PageSEO } from '@/components/SEO'
-import { Typography, Box, Paper, ImageList, ImageListItem, Stack } from '@mui/material'
+import { Typography, Box, Paper, Grid, Stack, ImageListItemBar } from '@mui/material'
 import { gradients } from '@/data/color-maps/gradients.mjs'
 import _ from 'lodash'
 
@@ -29,22 +29,19 @@ export default function Landing() {
                             Gradient generator
                             <Typography variant='body2' paddingTop={2}>Beautiful gradients from uigradients.</Typography>
                         </Typography>
-                        <Stack className='max-w-fit' direction='row' spacing={2}  > {/* Make the gradient map an accordion components */}
-                            <ImageList cols={{
-                                xs: 2,
-                                sm: 3
+                        {/* Make the gradient map an accordion components */}
+                        <Grid container className='h-72 overflow-scroll' columnSpacing={{ xs: 3, sm: 3 }} rowSpacing={{ xs: 2, sm: 3 }}>
+                            {_.map(gradients, (value) => (<Grid item component='div' xs={6} sm={4} md={3} >
 
 
-                            }} className='h-72 overflow-scroll space-x-1 sm:space-x-2 ' >
-                                {_.map(gradients, (value) => (<ImageListItem component='div'>
-                                    <Typography gutterBottom component='div' variant='caption'>
-                                        {value.name}
-                                        {/* Must attach onCLICK and hover events to show expanded metadata */}
-                                        <Paper style={{ backgroundImage: `linear-gradient(${value.colors})` }} className='w-24 h-24 sm:w-32 sm:h-32' />
-                                    </Typography>
-                                </ImageListItem>))}
-                            </ImageList>
-                        </Stack>
+                                {/* Must attach onCLICK and hover events to show expanded metadata */}
+                                <Paper style={{ backgroundImage: `linear-gradient(${value.colors})` }} className='pb-3 w-36 h-36 md:w-32 md:h-32' />
+                                <Typography marginTop={1} component='div' variant='caption'>
+                                    {value.name}
+                                </Typography>
+                            </Grid>))}
+                        </Grid>
+
 
                     </div>
                     <div className="-m-4 flex flex-wrap">
