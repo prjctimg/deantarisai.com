@@ -22,9 +22,9 @@ export default function Home({ posts }) {
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <p className="text-xl pb-1 leading-7 font-bold text-black dark:text-gray-400">
-            Hi, I'm Dean Tarisai</p>
-          <p className='text-gray-600 font-regular dark:text-gray-100'>Welcome to my blog! (more of an online journal though).
-            <br />  I blog about frontend development and any gold nuggets I find worth sharing. In my free time I write pieces and consume APIs. Always learning (as always).</p>
+            Hi👋🏾, I'm Dean Tarisai</p>
+          <p className='text-gray-600 font-regular dark:text-gray-100'>Welcome to my blog! (more of an online journal📓 though).
+            <br />  I blog about frontend development👨🏿‍💻 and any gold nuggets I find worth sharing📍. In my free time I write✍🏾 pieces and consume😋 APIs. Always learning (as always🌌).</p>
           <h2 className="pt-6 text-xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Recent posts
           </h2>
