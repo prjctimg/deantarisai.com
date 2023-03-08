@@ -5,10 +5,16 @@ import { PageSEO } from '@/components/SEO'
 import { Typography, Box, Paper, Grid, Stack, ImageListItemBar } from '@mui/material'
 import { gradients } from '@/data/color-maps/gradients.mjs'
 import _ from 'lodash'
-
+import { useState } from 'react'
 
 
 export default function Landing() {
+    const [preview, setPreview] = useState(false)
+    const previewHandler = () => {
+        setPreview(true)
+    }
+
+
     return (
         <>
             <PageSEO title={`Huetiful - ${siteMetadata.author}`} description={siteMetadata.description} />
@@ -35,10 +41,13 @@ export default function Landing() {
 
 
                                 {/* Must attach onCLICK and hover events to show expanded metadata */}
-                                <Paper style={{ backgroundImage: `linear-gradient(${value.colors})` }} className='pb-3 w-36 h-36 md:w-32 md:h-32' />
+                                <Paper onClick={previewHandler} style={{ backgroundImage: `linear-gradient(${value.colors})` }} className='pb-3 w-36 h-36 hover:translate-x-1 delay-75 duration-200 md:w-32 md:h-32' />
                                 <Typography marginTop={1} component='div' variant='caption'>
                                     {value.name}
                                 </Typography>
+                                {preview && (<Paper style={{ backgroundImage: `linear-gradient(${value.colors})` }} className='pb-3 w-36 h-36 md:w-32 md:h-32'>
+                                    <ImageListItemBar title={value.colors} />
+                                </Paper>)}
                             </Grid>))}
                         </Grid>
 
