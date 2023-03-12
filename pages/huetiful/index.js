@@ -1,41 +1,23 @@
 import siteMetadata from '@/data/siteMetadata'
-import projectsData from '@/data/projectsData'
+/* import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
+ */
 import { PageSEO } from '@/components/SEO'
-import { Typography, Box, Paper, Grid, Stack, ImageListItemBar } from '@mui/material'
+import { Typography, Grid } from '@mui/material'
 import { gradients } from '@/data/color-maps/gradients.mjs'
 import _ from 'lodash'
-import { useState } from 'react'
+import GradientPreview from '@/components/GradientPreview'
 
 
 
-const PreviewComponent = ({ colors, clickHandler }) => {
-    return (
-        _.map(colors, value => <Paper onClick={clickHandler} style={{ background: value }} className='p-4 w-18 h-18 md:w-16 md:h-16' />)
-    )
-}
 
-const GradientPreview = ({ colors, name, clickHandler }) => {
-    return (<><Paper onClick={clickHandler} style={{ backgroundImage: `linear-gradient(${colors} )` }} className='pb-3 w-36 h-36 hover:translate-x-1 delay-75 duration-200 md:w-32 md:h-32' />
-        <Typography marginTop={1} component='div' variant='caption'>
-            {name}
-        </Typography></>)
-}
 
 
 
 
 export default function Landing() {
-    const [preview, setPreview] = useState(false)
-    const [gradient, setGradient] = useState(true)
 
-    const previewHandler = () => {
-        setPreview(true)
-    }
 
-    const gradientHandler = () => {
-        setPreview(false)
-    }
 
     return (
         <>
@@ -55,22 +37,16 @@ export default function Landing() {
                     <div className='p-4 bg-gray-100 w-full h-fit'>
                         <Typography component='div' gutterBottom variant='h5' className='font-extralight font-sans'>
                             Gradient generator
-                            <Typography variant='body2' paddingTop={2}>Beautiful gradients from uigradients.</Typography>
+                            <Typography gutterBottom variant='body2' paddingTop={2}>Beautiful gradients from uigradients.</Typography>
                         </Typography>
                         {/* Make the gradient map an accordion components */}
                         <Grid container className='h-72 overflow-scroll' columnSpacing={{ xs: 3, sm: 3 }} rowSpacing={{ xs: 2, sm: 3 }}>
-                            {_.map(gradients, (value) => (<Grid item component='div' xs={6} sm={4} md={3} >
-
-
-                                {/* Must attach onCLICK and hover events to show expanded metadata */}
-                                {preview ? <PreviewComponent clickHandler={() => setPreview(false)} colors={value.colors} /> : <GradientPreview colors={value.colors} name={value.name} clickHandler={() => setPreview(true)} />}
-
-                            </Grid>))}
+                            {_.map(gradients, (value) => (<GradientPreview value={value} />))}
                         </Grid>
 
 
                     </div>
-                    <div className="-m-4 flex flex-wrap">
+                    {/*                     <div className="-m-4 flex flex-wrap">
                         {projectsData.map((d) => (
                             <Card
                                 key={d.title}
@@ -81,7 +57,7 @@ export default function Landing() {
                             />
                         ))}
                     </div>
-                </div>
+ */}                </div>
             </div>
         </>
     )

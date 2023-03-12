@@ -1,6 +1,6 @@
 import useState from 'react'
 
-function ClipboardCopy({ copyText }) {
+export function ClipboardCopy({ copyText = [] }) {
     const [isCopied, setIsCopied] = useState(false); // This is the function we wrote earlier
     async function copyTextToClipboard(text) {
         if ('clipboard' in navigator) {
