@@ -8,12 +8,34 @@ import _ from 'lodash'
 import { useState } from 'react'
 
 
+
+const PreviewComponent = ({ colors, clickHandler }) => {
+    return (
+        _.map(colors, value => <Paper onClick={clickHandler} style={{ background: value }} className='p-4 w-18 h-18 md:w-16 md:h-16' />)
+    )
+}
+
+const GradientPreview = ({ colors, name, clickHandler }) => {
+    return (<><Paper onClick={clickHandler} style={{ backgroundImage: `linear-gradient(${colors} )` }} className='pb-3 w-36 h-36 hover:translate-x-1 delay-75 duration-200 md:w-32 md:h-32' />
+        <Typography marginTop={1} component='div' variant='caption'>
+            {name}
+        </Typography></>)
+}
+
+
+
+
 export default function Landing() {
     const [preview, setPreview] = useState(false)
+    const [gradient, setGradient] = useState(true)
+
     const previewHandler = () => {
         setPreview(true)
     }
 
+    const gradientHandler = () => {
+        setPreview(false)
+    }
 
     return (
         <>
@@ -41,13 +63,8 @@ export default function Landing() {
 
 
                                 {/* Must attach onCLICK and hover events to show expanded metadata */}
-                                <Paper onClick={previewHandler} style={{ backgroundImage: `linear-gradient(${value.colors})` }} className='pb-3 w-36 h-36 hover:translate-x-1 delay-75 duration-200 md:w-32 md:h-32' />
-                                <Typography marginTop={1} component='div' variant='caption'>
-                                    {value.name}
-                                </Typography>
-                                {preview && (<Paper style={{ backgroundImage: `linear-gradient(${value.colors})` }} className='pb-3 w-36 h-36 md:w-32 md:h-32'>
-                                    <ImageListItemBar title={value.colors} />
-                                </Paper>)}
+                                {preview ? <PreviewComponent clickHandler={() => setPreview(false)} colors={value.colors} /> : <GradientPreview colors={value.colors} name={value.name} clickHandler={() => setPreview(true)} />}
+
                             </Grid>))}
                         </Grid>
 
